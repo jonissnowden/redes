@@ -1,0 +1,27 @@
+Questão 01)
+
+Remote Authentication Dial In User Service (RADIUS) é um protocolo de rede que fornece gerenciamento autenticação, autorização e contabilização quem se conecta a serviços de rede.
+O RADIUS possui três funções básicas, são elas: autenticação de usuários (ou dispositivos) antes de permitir o acesso a rede, autorização de outros usuários (ou dispositivos) a usar determinados serviços da rede e  informar sobre o uso de outros serviços. 
+Questão 02)
+
+RFC: 2865
+Data:  June 2000
+Categoria: Standards Track 
+Autores: C. Rigney, S. Willens, A. Rubens,  W. Simpson.
+
+Questão 03)
+Access-Challenge, Access-Request e Access Accept.
+
+Questão 04)
+
+“Um pedido de acesso DEVE conter um atributo de nome de usuário.” 
+- User-Name(1):joe
+- User-Name(1): bob  
+
+“Um pedido de acesso DEVE conter uma senha de usuário ou um CHAP- Senha ou um Estado.”
+
+“Um pedido de acesso DEVE conter um NAS-Port ou NAS-Port-Type” 
+- NAS-Port-Type: Wireless-802.11 (19)
+- NAS-Port: 1
+
+
