@@ -1,6 +1,8 @@
+			                      
+					   ATIVIDADE SOBRE SEGURANÇA 01
+			                    (Descobrindo a chave WPA2)
 
 Questão 1.1:
-
 *Criar interface monitor: 
 	$sudo iw dev wls2 add mon0 type monitor 
 *$sudo airodump-ng mon0
@@ -31,6 +33,16 @@ up airodump-ng (placa) aireplay-ng -a MAC mon0 -0 0 (Se der erro use o --ignore-
 CTRL+C para o ataque.
 
 Questão 1.4:
-01) modificar o nome do computador para dificultar que reconheçam sua maquina com facilidade 
-02) utilizar uma "senha forte"
+utilizar uma "senha forte", com diferentes tipos de caracteres.
+                        
+			                      
+					   ATIVIDADE SOBRE SEGURANÇA 02
+			                    (ARP Spoofing + SSLSTRIP)
+Questão 2.0:
+O computador da vitima entende que o computador do atacante  é o endereço de destino. As informações capturadas são guardadas 
+em um arquivo chamado de sslstrip, através de uma pesquisa nesse arquivo  possivel encontrar a senha que a vitima digitou. O nome 
+do ataque é: man-in-the-middle (homem no meio), pois o atacante intercepta os dados.
 
+Questão 2.1:
+Etherwall é uma ferramenta de código aberto para a segurança de rede, desenvolvida para impedir que ataques man-in-the-middle 
+sejam executados através de ataques ARP Spoofing. Ela tem  a capacidade de detectar e bloquear esse tipo de ataque.
