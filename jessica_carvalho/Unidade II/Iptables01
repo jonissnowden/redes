@@ -1,0 +1,20 @@
+                              ATIVIDADE SOBRE SEGURANÇA 02 - (IPTABLES)
+01) 
+ACCEPT = A outra maquina consegue acessar o servidor (pacote permitido)
+DROP = A outra maquina não consegue acessar o servidor (descartar pacote)
+    
+02) 
+A maquina que o IP foi bloqueado não consegue acessar o servidor 
+Enquanto a outra sim, já que a regra "ACCEPT" é padrão
+
+03)
+Não  possivel visualizar pois foi utilizado a regra "DROP", ela não retorna nenhuma mensagem ,como o "REJECT".
+
+04)
+TELNET: O programa Telnet precisa enviar os detalhes da conta do usuário através da rede, ou na Internet. O Telnet não têm 
+quaisquer procedimentos de criptografia e assim esses dados sensíveis é enviado como texto simples.
+SSH: Executa as mesmas funções que o Telnet, mas ele criptografa todas as suas comunicações entre o computador local eo
+computadorremoto. 
+
+05) 
+A conexão SSH é bloqueada, não  possivel digitar nada no terminal remotamente.
