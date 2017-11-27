@@ -1,0 +1,46 @@
+#@JONIS - JESSICA TI_441                                                      
+
+#  FIREWALL IPTABLES ###########################################################
+
+#LIMPAR REGRAS ANTIGAS
+sudo iptables -F
+
+#LIBERA A PASSAGEM DE PACOTES PARA A FAIXA DE IP'S INTERNOS
+sudo iptables -A FORWARD -s 10.17.9.19/21 -j ACCEPT
+
+#LIBERA O NAT PARA IP'S INTERNOS (NA PLACA) 
+sudo iptables -t nat -A POSTROUTING -s 10.17.9.19/21 -o eno1 -j MASQUERADE
+
+#POLITICAS
+sudo iptables -t filter -P INPUT DROP
+sudo iptables -t filter -P OUTPUT DROP
+sudo iptables -t filter -P FORWARD DROP
+
+#PERMITIR ICMP
+sudo iptables -t filter -A OUTPUT -p icmp --icmp-type echo-reply -j ACCEPT
+
+#PERMITIR HTTPS
+sudo iptables -t filter -A FORWARD -s 10.17.9.19/21 -o eno1 -p tcp --dport 433 -j ACCEPT
+sudo iptables -t filter -A FORWARD -d 10.17.9.19/21 -i eno1 -p tcp --sport 433 -j ACCEPT
+
+#PERMITIR FTP
+sudo iptables -t filter -A FORWARD -s 10.17.9.19/21 -o eno1 -p tcp --dport 20:21 -j ACCEPT
+sudo iptables -t filter -A FORWARD -d 10.17.9.19/21 -i eno1 -p tcp --sport 20:21 -j ACCEPT
+
+#PERMITIR SMTP
+sudo iptables -t filter -A FORWARD -s 10.17.9.19/21 -o eno1 -p tcp --dport 25 -j ACCEPT
+sudo iptables -t filter -A FORWARD -d 10.17.9.19/21 -i eno1 -p tcp --sport 25 -j ACCEPT
+
+#PERMITIR IMAP
+sudo iptables -t filter -A FORWARD -s 10.17.9.19/21 -o eno1 -p tcp --dport 993 -j ACCEPT
+sudo iptables -t filter -A FORWARD -d 10.17.9.19/21 -i eno1 -p tcp --sport 993 -j ACCEPT
+
+#PERMITIR SSH 
+sudo iptables -A INPUT -p tcp -s 10.17.8.1 --dport 22 -i eno1 -j ACCEPT
+sudo iptables -A INPUT -p tcp -s 10.17.8.0/21 --dport 22 -i eno1 -j ACCEPT
+
+#LOGAR TENTATIVAS DE CONEXÃO
+sudo iptables -A INPUT -p tcp --dport 22 --syn -j LOG
+
+#EXIBIR 
+sudo iptables -L
