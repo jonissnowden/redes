@@ -1,0 +1,44 @@
+
+                                              ATIVIDADE - LIVRO DE KUROSE
+
+8.1-
+Questão 01)
+ *Confidencialidade de mensagem - somente o remetente devem entender o conteudo da mensagem transmitida. Por isso a necessidade
+ da mensagem ser cifrada.
+ 
+ *Integridade de mensagem - Mesmo que remetente e o destinatario consigam se autenticar reciprocamente, eles também querem
+ assegurar que o conteúdo não foi alterado. Tecnicas de verificação que proporcionam essa integridade podem ser encontradas 
+ nos protocolos de transporte e enlace.
+
+8.3 -
+  Questão 18)
+  *O computador da vitima entende que o computador do atacante  é o endereço de destino. As informações capturadas são guardadas 
+em um arquivo chamado de sslstrip, através de uma pesquisa nesse arquivo  possivel encontrar a senha que a vitima digitou. O nome 
+do ataque é: man-in-the-middle (homem no meio), pois o atacante intercepta os dados.
+Através de diferentes algoritmos de criptografia simétrica é possível garantir a confidencialidade e integridade da comunicação - 
+não é possivel invadir via MITM.
+
+ 8.4 -
+  Questão 21)
+  No SSL, os nonces são usados para proteger o "ataque de repetiço de conexão", e os números de sequencia são usados para defender
+  a repetição de pacotes individuais durante uma sessão em andamento.
+  
+  
+  QUESTÕES DISSERTATIVAS: 
+   Questão 01)
+    01. O intruso remove DNS importantes como o do google e o úsuario fica impossibilitado de acessar as páginas
+    02. O intruso modifica endereços DNS para redirecionar paginas falsas, criadas por ele, afim de conseguir informaçes importantes 
+    (ex: contas bancarias, senhas)
+    03. O intruso pode criar sites falsos "clones" das paginas originais - que o usuário tem costumes de acessar, e adicionar 
+    muitas propagandas, afim de lucrar com isso.
+   
+  Questão 03)
+   IPSec de uma forma bem resumida, é um conjunto de padrões utilizados para que possamos garantir uma comunicação 
+   segura (criptografada) entre dois ou mais hosts em uma rede. 
+   
+   Questão 04)
+   O bot pode ser um programa independente, agindo e se propagando através do computador. Desta forma ele cria suas redes e 
+   espalha conteúdo perigoso através dela, ou são utilizados para derrubar servidores.
+   Soluções: *Filtrar pacotes para evitar que as mensagens sejam enviadas 
+             *Verificar listas negras de bloqueios de IPs infectados
+             *Deixar de programar o envio de e-mails na porta 25, mudar para a 587 (considerada mais segura) 
