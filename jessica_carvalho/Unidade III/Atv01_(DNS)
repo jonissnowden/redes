@@ -1,0 +1,22 @@
+ALUNOS: DEIVID GOMES SILVA E JESSICA ANDRADE DE CARVALHO
+
+                          ---------- Atividade sobre Domain Name System (DNS) ----------------------
+
+1º) 
+INSTALAR O APACHE2 - $sudo apt-get install apache2 
+
+2º)
+CLONAR PÁGINA WEB "google.com"
+$sudo wget -S https://www.google.com.br/ - É um programa do proprio SO, é um comando que permite clonar páginas web
+Esse arquivo foi salvo no diretório WEB: /var/www/html
+
+3º) 
+$sudo /etc/init.d/apache2 restart
+
+4º) 
+$sudo nano /etc/hosts - Modifica: adiciona no arquivo - IP_Colega      google.com  
+referenciando a busca "google.com" ao ip do colega
+
+5º) 
+$sudo nano /etc/resolv.conf - Modifica: nameserver, este estava referenciando o ifba. - nameserver: ip_colega
+
